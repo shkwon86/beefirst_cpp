@@ -3,13 +3,11 @@
 /**
 * C++ Lambda의 테스트를 위한 클래스
 */
-class LearnLambda
+class ExamLambda
 {
 public :
 
-	void T1();
-
-private :
-
+	/** std::sort + lambda */
+	void Sort();
 };
 

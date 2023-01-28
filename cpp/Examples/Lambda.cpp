@@ -2,7 +2,7 @@
 #include "../Common/CommonDefs.h"
 
 // sort
-void LearnLambda::T1()
+void ExamLambda::Sort()
 {
 	const size_t _COUNT = 10;
 	std::vector<int> _numbers;

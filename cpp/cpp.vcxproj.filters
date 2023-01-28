@@ -4,19 +4,16 @@
     <Filter Include="Main">
       <UniqueIdentifier>{5a633a12-2254-4e8b-a608-6f86c12254f6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lambda">
-      <UniqueIdentifier>{03bdb0a5-bff1-41e1-87b2-940d0a24976c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Common">
       <UniqueIdentifier>{a0d1784b-49ea-4001-bda0-f7f3d457e7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Examples">
+      <UniqueIdentifier>{03bdb0a5-bff1-41e1-87b2-940d0a24976c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main\Main.h">
       <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Lambda\Lambda.h">
-      <Filter>Lambda</Filter>
     </ClInclude>
     <ClInclude Include="Common\CommonDefs.h">
       <Filter>Common</Filter>
@@ -24,16 +21,22 @@
     <ClInclude Include="Common\Singleton.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="Examples\Examples.h">
+      <Filter>Examples</Filter>
+    </ClInclude>
+    <ClInclude Include="Examples\Lambda.h">
+      <Filter>Examples</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Lambda\Lambda.cpp">
-      <Filter>Lambda</Filter>
-    </ClCompile>
     <ClCompile Include="Common\CommonDefs.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Examples\Lambda.cpp">
+      <Filter>Examples</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
