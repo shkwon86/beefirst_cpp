@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs/beefirst_cpp
+/cpp/x64/Debug
+/x64/Debug
