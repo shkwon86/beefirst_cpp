@@ -21,12 +21,16 @@
   <ItemGroup>
     <ClInclude Include="Common\CommonDefs.h" />
     <ClInclude Include="Common\Singleton.h" />
+    <ClInclude Include="Employee\Database.h" />
+    <ClInclude Include="Employee\Employee.h" />
     <ClInclude Include="Examples\Examples.h" />
     <ClInclude Include="Examples\Lambda.h" />
     <ClInclude Include="Main\Main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\CommonDefs.cpp" />
+    <ClCompile Include="Employee\Database.cpp" />
+    <ClCompile Include="Employee\Employee.cpp" />
     <ClCompile Include="Examples\Lambda.cpp" />
     <ClCompile Include="Main\Main.cpp" />
   </ItemGroup>

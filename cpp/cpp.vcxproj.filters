@@ -10,6 +10,9 @@
     <Filter Include="Examples">
       <UniqueIdentifier>{03bdb0a5-bff1-41e1-87b2-940d0a24976c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Employee">
+      <UniqueIdentifier>{b6e2a1a4-c0e9-40b6-a838-33b59fa633c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main\Main.h">
@@ -27,6 +30,12 @@
     <ClInclude Include="Examples\Lambda.h">
       <Filter>Examples</Filter>
     </ClInclude>
+    <ClInclude Include="Employee\Employee.h">
+      <Filter>Employee</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee\Database.h">
+      <Filter>Employee</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
@@ -37,6 +46,12 @@
     </ClCompile>
     <ClCompile Include="Examples\Lambda.cpp">
       <Filter>Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Employee\Employee.cpp">
+      <Filter>Employee</Filter>
+    </ClCompile>
+    <ClCompile Include="Employee\Database.cpp">
+      <Filter>Employee</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
