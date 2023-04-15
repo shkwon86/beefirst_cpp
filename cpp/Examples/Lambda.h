@@ -9,5 +9,8 @@ public :
 
 	/** std::sort + lambda */
 	void Sort();
+
+	/** exam */
+	void Test1();
 };
 
