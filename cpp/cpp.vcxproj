@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor\Actor.h" />
+    <ClInclude Include="Actor\ActorFilter.h" />
+    <ClInclude Include="Actor\ActorSpecification.h" />
+    <ClInclude Include="Actor\Builder.h" />
     <ClInclude Include="Common\CommonDefs.h" />
     <ClInclude Include="Common\Singleton.h" />
     <ClInclude Include="Examples\Examples.h" />
@@ -26,6 +30,10 @@
     <ClInclude Include="Main\Main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor\Actor.cpp" />
+    <ClCompile Include="Actor\ActorFilter.cpp" />
+    <ClCompile Include="Actor\ActorSpecification.cpp" />
+    <ClCompile Include="Actor\Builder.cpp" />
     <ClCompile Include="Common\CommonDefs.cpp" />
     <ClCompile Include="Examples\Lambda.cpp" />
     <ClCompile Include="Main\Main.cpp" />
