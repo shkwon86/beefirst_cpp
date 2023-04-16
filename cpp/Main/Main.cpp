@@ -57,8 +57,10 @@ int main()
         }
     << std::endl;
 
-    Tag tag = IMG{ "asdf" };
 
+    auto builder = Actor::Build("test1", EActorType::Player);
+    builder->add_child("child01", EActorType::Object)
+        .add_child("child02", EActorType::Object);
 
     return 0;
 }

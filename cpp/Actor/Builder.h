@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Common/CommonDefs.h"
+#include "Actor.h"
 
 class Tag
 {
@@ -49,4 +50,30 @@ public :
 	{
 		attriibutes.emplace_back("src", _url);
 	}
+};
+
+
+class ActorBuilder
+{
+public :
+	ActorBuilder(const std::string& _name, EActorType _type)
+		: root(_name, _type)
+	{
+	}
+
+	ActorBuilder& add_child(const std::string& _name, EActorType _type)
+	{
+		std::shared_ptr<Actor> child = std::make_shared<Actor>(_name, _type);
+		root.AddChild(child);
+
+		return *this;
+	}
+
+	operator Actor() const
+	{
+		return root;
+	}
+
+private :
+	Actor root;
 };

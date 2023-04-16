@@ -15,3 +15,13 @@ Actor::Actor(const std::string& _name, EActorType _type)
 Actor::~Actor()
 {
 }
+
+std::unique_ptr<ActorBuilder> Actor::Build(const std::string& _name, EActorType _type)
+{
+	return std::make_unique<ActorBuilder>(_name, _type);
+}
+
+void Actor::AddChild(std::shared_ptr<Actor> _child)
+{
+	childActor_.emplace_back(_child);
+}
