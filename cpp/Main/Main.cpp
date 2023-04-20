@@ -2,6 +2,30 @@
 #include "../Actor/ActorSpecification.h"
 #include "../Actor/Builder.h"
 
+// 3D vector class
+class Vector3
+{
+public:
+	double x, y, z;
+
+	Vector3(double x = 0.0, double y = 0.0, double z = 0.0) : x(x), y(y), z(z) {}
+
+	Vector3 operator+(const Vector3& v) const
+	{
+		return Vector3(x + v.x, y + v.y, z + v.z);
+	}
+
+	Vector3 operator-(const Vector3& v) const
+	{
+		return Vector3(x - v.x, y - v.y, z - v.z);
+	}
+
+	Vector3 operator*(double s) const
+	{
+		return Vector3(x * s, y * s, z * s);
+	}
+};
+
 int main()
 {
     ExamLambda lambda;
@@ -62,18 +86,29 @@ int main()
     //builder->add_child("child01", EActorType::Object)
     //    .add_child("child02", EActorType::Object);
 
+	const double GRAVITY = 9.8; // 중력가속도
+	const int FPS = 60; // 초당 프레임수
 
-	const double g = 9.8; // 중력가속도
-	const double h = 10.0; // 최대 높이
-	const int fps = 60; // 초당 60프레임
+	Vector3 pos(0.0, 0.0, 0.0); // 시작 위치
+	Vector3 vel(10.0, 20.0, 30.0); // 초기 속도
+	double time = 0.0; // 시작 시간
 
-	double time = sqrt(2 * h / g); // 최대 높이에 도달하는 시간
-	double velocity = g * time / fps; // 초당 60프레임으로 계산된 속도
+	// 매 프레임마다 위치 계산하고 출력하기
+	for (int frame = 0; frame < 60; frame++)
+	{
+		// 중력 가속도에 따른 변화량 계산
+		Vector3 gravity(0.0, -GRAVITY, 0.0);
+		Vector3 deltaPos = vel * (1.0 / FPS);
+		Vector3 deltaVel = gravity * (1.0 / FPS);
 
-	std::cout << "Initial velocity: " << velocity << std::endl;
-    std::cout << "total time: " << time << std::endl;
+		// 새로운 위치와 속도 계산
+		pos = pos + deltaPos;
+		vel = vel + deltaVel;
+		time += 1.0 / FPS;
 
-    std::cout << "velocity sec :" << g * time << std::endl;
+		// 현재 시간, 위치, 속도 출력
+		std::cout << "Time: " << time << ", Position: (" << pos.x << ", " << pos.y << ", " << pos.z << "), Velocity: (" << vel.x << ", " << vel.y << ", " << vel.z << ")" << std::endl;
+	}
 
     return 0;
 }
