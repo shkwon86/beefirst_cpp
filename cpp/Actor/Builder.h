@@ -52,28 +52,28 @@ public :
 	}
 };
 
-
-class ActorBuilder
-{
-public :
-	ActorBuilder(const std::string& _name, EActorType _type)
-		: root(_name, _type)
-	{
-	}
-
-	ActorBuilder& add_child(const std::string& _name, EActorType _type)
-	{
-		std::shared_ptr<Actor> child = std::make_shared<Actor>(_name, _type);
-		root.AddChild(child);
-
-		return *this;
-	}
-
-	operator Actor() const
-	{
-		return root;
-	}
-
-private :
-	Actor root;
-};
+//
+//class ActorBuilder
+//{
+//public :
+//	ActorBuilder(const std::string& _name, EActorType _type)
+//		: root(_name, _type)
+//	{
+//	}
+//
+//	ActorBuilder& add_child(const std::string& _name, EActorType _type)
+//	{
+//		std::shared_ptr<Actor> child = std::make_shared<Actor>(_name, _type);
+//		root.AddChild(child);
+//
+//		return *this;
+//	}
+//
+//	operator Actor() const
+//	{
+//		return root;
+//	}
+//
+//private :
+//	Actor root;
+//};

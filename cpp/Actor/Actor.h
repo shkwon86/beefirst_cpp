@@ -18,18 +18,19 @@ enum EActorType
 class Actor
 {
 public :
-	friend ActorBuilder;
+//	friend ActorBuilder;
 
 	~Actor();
 
-	static std::unique_ptr<ActorBuilder> Build(const std::string& _name, EActorType _type);
+//	static std::unique_ptr<ActorBuilder> Build(const std::string& _name, EActorType _type);
 
 	void AddChild(std::shared_ptr<Actor> _child);
 
 	std::string GetName() const { return name_; }
 	EActorType GetType() const { return type_; }
 
-protected :
+//protected :
+public:
 	Actor();
 	Actor(const std::string& _name, EActorType _type);
 
